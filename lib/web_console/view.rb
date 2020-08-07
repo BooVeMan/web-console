@@ -29,8 +29,8 @@ module WebConsole
     #
     # The inlined string is returned as an actual JavaScript string. You
     # don't need to wrap the result yourself.
-    def render_inlined_string(template)
-      render(template: template, layout: "layouts/inlined_string")
+    def render_inlined_string(template, format)
+      render(template: template, formats: [format], layout: "layouts/inlined_string")
     end
 
     # Custom ActionView::Base#render wrapper which silences all the log
